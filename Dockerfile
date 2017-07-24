@@ -9,6 +9,6 @@ RUN git clone --depth 1 --recursive -b dtls https://github.com/home-assistant/li
  && /bin/bash autogen.sh \
  && ./configure --disable-documentation --disable-shared --without-debug CFLAGS="-D COAP_DEBUG_FD=stderr" \
  && make \
- && make install
- && cd ..
+ && make install \
+ && cd .. \
  && rm -rf libcoap
